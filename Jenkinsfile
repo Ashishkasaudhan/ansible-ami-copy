@@ -1,5 +1,10 @@
 pipeline {
-  agent { label 'slave' }
+  agent {
+    docker {
+      image 'ashishkasaudhan/k8s:amazon'
+    }
+
+  }
   stages {
     stage('pull code') {
       steps {
