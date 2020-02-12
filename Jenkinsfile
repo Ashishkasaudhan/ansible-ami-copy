@@ -1,9 +1,11 @@
 pipeline {
-  agent { label 'slave' }
+  agent {
+    label 'slave'
+  }
   stages {
-    stage('pull code') {
+    stage('packer validate ') {
       steps {
-        echo 'java -version'
+        sh 'packer inspect eks-worker-al2.json'
       }
     }
 
