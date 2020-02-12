@@ -2,7 +2,6 @@ pipeline {
   agent {
     docker {
       label 'slave'
-      image 'ashishkasaudhan/k8s:amazon'
     }
 
   }
