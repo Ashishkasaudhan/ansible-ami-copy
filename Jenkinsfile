@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'openjdk:15-jdk-oracle'
-    }
-
-  }
+  agent any
   stages {
     stage('pull code') {
       steps {
