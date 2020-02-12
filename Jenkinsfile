@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      label 'slave'
-    }
-
-  }
+  agent { label 'slave' }
   stages {
     stage('pull code') {
       steps {
